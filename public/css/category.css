@@ -1,0 +1,306 @@
+/* portfolio */
+.portfolio{
+    background-color: var(--section-background-color);
+    padding-top: 20px;
+    overflow: auto;
+}
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}   
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: var(--section-title);
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--section-title-border);
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+.section-title h4{
+    color: var(--section-title);
+}
+.section-title p {
+    margin-bottom: 0;
+}
+.portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+}
+.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+    /* color: #fff; */
+    color: var(--filter-color);
+    background: var(--filter-background);   
+}
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 16px 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    color:var(--navbar-item-color);
+    /* color: #444444; */
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 50px;
+}
+.portfolio .portfolio-item{
+    margin-bottom: 30px;
+}
+.portfolio-container{
+    padding: 30px 0px 80px 0px;
+}
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    /* position: relative;
+    overflow: hidden; */
+    z-index: 1;
+    /* background: rgba(34, 34, 34, 0.6); */
+}
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(34, 34, 34, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+.portfolio .portfolio-wrap img {
+    transition: all ease-in-out 0.3s;
+}
+  .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+}
+/* .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+} */
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 5px 0 0;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+
+/* imglist for portfolio */
+.probootstrap-main {
+    width: 100%;
+    float:inherit;
+    padding: 30px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.probootstrap-main:before {
+    background: rgba(0,0,0,.5);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 6;
+    visibility: hidden;
+    opacity: 0;
+    transition: .6s all ease;
+}
+.probootstrap-main .card-columns .card.img-loaded {
+    opacity: 1;
+    visibility: visible;
+}
+.probootstrap-main .card-columns .card {
+    background: #e6e6e6;
+    border: none;
+    border-radius: 0!important;
+    margin-bottom: 20px;
+    transform: scale(1);
+    transition: .2s all ease;
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+.probootstrap-main .card-columns .card a {
+    position: relative;
+    display: block;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+}
+.probootstrap-main .card-columns .card a:before {
+    z-index: 1;
+    content: "";
+    background: rgba(255,255,255,.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s all ease;
+}
+.probootstrap-main .card-columns .card a .card-img-top {
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important;
+}
+.probootstrap-animate {
+    opacity: 0;
+    visibility: hidden;
+}
+.vimeoimg{
+    height: 500px;
+    animation: fadeInUp;
+    animation-delay: .4s;
+}
+.soundcloudimg{
+    height: 600px;
+}
+.detailimg{
+    height:450px;
+}
+.zoom-in-out{
+    animation: zoom-in-out 1s ;
+}
+.zoom-out{
+    /* animation: zoom-out 1s ease infinite; */
+    transition-delay: .4s;
+    transition-timing-function: ease-in-out;
+}
+.fadeInUp {
+    animation-name: fadeInUp ;
+    animation-delay: .4s;
+}
+.probootstrap-animated {
+    animation-duration: .5s;
+    animation-fill-mode: both;
+}
+.probootstrap-main .card-columns .card:hover .portfolio-info{
+    opacity: 1;
+}
+
+.probootstrap-main .card-columns .card:hover, .probootstrap-main .card-columns .card:focus {
+    transform: scale(.96);
+}
+.probootstrap-main .card-columns .card:hover a:before, .probootstrap-main .card-columns .card:focus a:before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    visibility: visible;
+    opacity: 1;
+}
+@keyframes zoom-out{
+     0% {
+        transform: translateZ(0) scale(1);
+      }
+      50% {
+        font-size: 18px;
+      }
+      100% {
+      font-size: 15px;
+      }
+}
+@keyframes fadeInUp{
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transform: translate3d(0,40px,0);
+        transform: translate3d(0,40px,0);
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+.card-columns {
+    column-count: 3;
+    column-gap: 1.25rem;
+}
+@media(min-width:576px)
+{
+    .probootstrap-main {
+        width: calc(100% - 50px);
+    }
+  
+    .card-columns .card {
+        display: inline-block;
+        width: 100%;
+    }
+}
+@media(max-width:1199px){
+    .card-columns {
+        column-count: 3;
+        column-gap: 1.25rem;
+    }
+}
+@media(max-width:991px){
+    .card-columns {
+        column-count: 2;
+        column-gap: 1.25rem;
+    }
+    .probootstrap-main{
+        padding: 30px 0px;
+        width: 100%;
+    }
+    
+}
+@media(max-width:576px){
+    .card-columns {
+        column-count: 1;
+        column-gap: 1.25rem;
+    }
+}
+
